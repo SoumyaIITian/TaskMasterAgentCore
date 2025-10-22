@@ -65,8 +65,7 @@ def get_weather(location: str):
             response.raise_for_status() # Raises HTTPError for bad responses (4XX, 5XX)
         data = response.json()
 
-        # Check OpenWeatherMap's specific response code for success/failure
-        if data.get("cod") == 200: # Success code is 200
+        if data.get("cod") == 200: 
             main = data.get("main", {})
             weather_list = data.get("weather", [])
             
@@ -110,8 +109,6 @@ def get_weather(location: str):
 # Define available tools
 TOOLS = {
     "get_weather": get_weather,
-    # Add more tools here later, e.g.:
-    # "find_calendar_slot": find_calendar_slot, 
 }
 
 async def run_agent(user_query: str):
