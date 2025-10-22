@@ -49,7 +49,3 @@ This project demonstrates the "ReAct" (Reasoning and Acting) pattern, where an L
     ```bash
     curl -X POST [http://127.0.0.1:8000/agent](http://127.0.0.1:8000/agent) -H "Content-Type: application/json" -d '{"query": "Tell me a joke"}'
     ```
-
-## Next Steps
-
--   Build a simple web UI using Streamlit to interact with this agent.
